@@ -65,8 +65,7 @@ sub gen_zsh_complete_from_perinci_cmdline_script {
     my $cli = $dump_res->[2];
 
     if ($cli->{subcommands}) {
-        return [200, "OK",
-                "# TODO: script with subcommands not yet supported\n"];
+        return [412, "Sorry, script with subcommands not yet supported"];
     }
 
     state $pa = do {
